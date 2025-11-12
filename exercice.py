@@ -24,13 +24,12 @@ def hack_cesar_cipher(crypted_text, alphabet):
 
 
 def vigenere_cipher(text, password):
-	text = ""
 	list_of_keys = [ord(char) for char in password]
 	crypted_text = []
 	for index, char in enumerate(text):
-		current_key = [3, 5, 2]
-        text = "".join(ord(char) for char in % current_key)
-        print(text)
+		current_key = list_of_keys[index % len(list_of_keys)]
+		crypted_text.append(cesar_cipher(char, current_key))
+        
 		
 
 
