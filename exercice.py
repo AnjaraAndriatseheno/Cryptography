@@ -26,13 +26,13 @@ def hack_cesar_cipher(crypted_text, alphabet):
 def vigenere_cipher(text, password,key):
 	list_of_keys = [ord(char) for char in password]
 	crypted_text = []
+	key_length = len(password)
 	for index, char in enumerate(text):
 		current_key = list_of_keys[index % len(list_of_keys)]
+		current_key = list_of_keys[index % key_length]
 		crypted_text.append(cesar_cipher(char, current_key))
 		if type(text) == str and type(key) == int :
 		    return "".join(crypted_text)
-	
-	
 		
         
 
@@ -69,3 +69,7 @@ def vigenere_cipher(text, password,key):
 
 # 	hack_cesar_cipher(crypted_text, alphabet=string.printable) # exo3
 
+# 	message = "Aujourd'hui nous sommes mercredi "
+#     password = "journee"
+#     result = vigenere_cipher(message, password)
+#     print(result)
