@@ -58,18 +58,18 @@ def vigenere_cipher(text, password,key):
 
 
 
-# if __name__ == "__main__":
-# 	message = "le chocolat est bon"
+if __name__ == "__main__":
+	message = "le chocolat est bon"
 
-# 	crypted_text = cesar_cipher(message, 12) # exo 1
-# 	print(crypted_text)
+	crypted_text = cesar_cipher(message, 12) # exo 1
+	print(crypted_text)
 
-# 	initial_message = cesar_uncipher(crypted_text, 12) # exo 2
-# 	print(initial_message == message)
+	initial_message = cesar_uncipher(crypted_text, 12) # exo 2
+	print(initial_message == message)
 
-# 	hack_cesar_cipher(crypted_text, alphabet=string.printable) # exo3
+	hack_cesar_cipher(crypted_text, alphabet=string.printable) # exo3
 
-# 	message = "Aujourd'hui nous sommes mercredi "
-#     password = "journee"
-#     result = vigenere_cipher(message, password)
-#     print(result)
+message = "Aujourd'hui nous sommes mercredi "
+password = "journee"
+result = vigenere_cipher(message, password)
+print(result)
