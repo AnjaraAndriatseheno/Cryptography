@@ -29,8 +29,10 @@ def vigenere_cipher(text, password):
 	for index, char in enumerate(text):
 		current_key = list_of_keys[index % len(list_of_keys)]
 		crypted_text.append(cesar_cipher(char, current_key))
-        
+	return crypted_text
 		
+        
+
 
 
 
