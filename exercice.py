@@ -34,6 +34,7 @@ def vigenere_cipher(text, password,key):
 		if type(text) == str and type(key) == int :
 		    return "".join(crypted_text)
 		
+
         
 
 
