@@ -23,13 +23,16 @@ def hack_cesar_cipher(crypted_text, alphabet):
 		raise(TypeError)
 
 
-def vigenere_cipher(text, password):
+def vigenere_cipher(text, password,key):
 	list_of_keys = [ord(char) for char in password]
 	crypted_text = []
 	for index, char in enumerate(text):
 		current_key = list_of_keys[index % len(list_of_keys)]
 		crypted_text.append(cesar_cipher(char, current_key))
-	return crypted_text
+		if type(text) == str and type(key) == int :
+		    return "".join(crypted_text)
+	
+	
 		
         
 
