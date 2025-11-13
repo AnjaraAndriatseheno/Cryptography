@@ -1,3 +1,2 @@
-venv
-openCV
-pandas
+pillow
+streamlit
