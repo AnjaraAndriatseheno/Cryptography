@@ -1,13 +1,31 @@
 import cv2
 
-img = cv2.imread('fire_force.jpg')
+# Affichage d'image 
 
-cv2.imshow('Image', img)
+# img = cv2.imread('fire_force.jpg')
 
-cv2.waitKey(0)
+# cv2.imshow('Image', img)
 
-def affichage_pixel (img, x, y):
-    pixel_val = img[x, y]
-    print(f"Valeur du pixel {x}, {y} : {pixel_val}")
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
-affichage_pixel(img, 60, 100)
+# def affichage_pixel (img, x, y):
+#     pixel_val = img[x, y]
+#     print(f"Valeur du pixel {x}, {y} : {pixel_val}")
+
+# affichage_pixel(img, 60, 100)
+
+
+
+
+
+def text_to_binary(text) :
+    binary_result = "".join(format(ord(char), '08b') for char in text)
+    return binary_result
+
+
+if __name__ == "__main__":
+    message = input("Entrer un message à convertir en binaire :")
+
+print(f"Texte original : {message}")
+print(f"Binaire : {text_to_binary(message)}")
